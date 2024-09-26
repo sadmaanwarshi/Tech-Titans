@@ -107,17 +107,6 @@ Regularly refactored code by breaking down larger functions into smaller, reusab
 Reduced redundancy and improved code readability, making future updates and maintenance easier.
 
 
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
-
-
 
 
 
