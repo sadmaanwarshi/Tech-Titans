@@ -1,0 +1,197 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Background */
+body {
+    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Soft purple and teal */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.team-name {
+    font-family: cursive;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+/* File Type Dropdown */
+.file-type-dropdown {
+    margin-bottom: 20px;
+}
+
+#fileType {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Info Input */
+.info-input textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Generate Button */
+.generate-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff5e5e; /* Vibrant red */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.generate-button:hover {
+    background-color: #d9534f;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-bottom: 20px;
+}
+
+.upload-section input[type="file"] {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Tracking Switch */
+.tracking-switch {
+    display: flex;
+    align-items: center;
+}
+
+.tracking-switch label {
+    margin-right: 10px;
+}
+
+/* QR Code Container */
+#qrcode-container {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Frame Selection */
+.frame-selection {
+    margin-bottom: 20px;
+}
+
+.frames {
+    display: flex;
+    justify-content: center;
+}
+
+.frames input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Download Button */
+.download-button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.download-button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+}

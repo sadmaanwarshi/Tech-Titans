@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF with QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>PDF with QR Code Generator</h1>
+        </div>
+        <div class="content">
+            <div class="left-panel">
+                <div class="file-type-dropdown">
+                    <label for="fileType">File Type:</label>
+                    <select id="fileType">
+                        <option value="pdf">PDF</option>
+                        <option value="jpg">JPG</option>
+                    </select>
+                </div>
+                <div class="info-input">
+                    <textarea id="info" placeholder="Add a cover page with a title, description, and a website URL..." ></textarea>
+                </div>
+                <button class="generate-button" onclick="generateQRCode()">Generate QR Code</button>
+                <div class="upload-section">
+                    <label for="fileUpload">Upload any file:</label>
+                    <input type="file" id="fileUpload">
+                </div>
+                <div class="tracking-switch">
+                    <label for="tracking">Scan Tracking:</label>
+                    <input type="checkbox" id="tracking">
+                </div>
+            </div>
+            <div class="right-panel">
+                <div id="qrcode-container">
+                    <canvas id="qrcode"></canvas>
+                </div>
+                <div class="frame-selection">
+                    <h3>Frame</h3>
+                    <div class="frames">
+                        <div class="frame" onclick="selectFrame(this)">X</div>
+                        <div class="frame" onclick="selectFrame(this)">SCAN ME</div>
+                        <div class="frame" onclick="selectFrame(this)">QR CODE</div>
+                    </div>
+                </div>
+                <div class="download-buttons">
+                    <button class="download-button">Download JPG</button>
+                    <button class="download-button">Print Quality</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to generate QR Code
+        function generateQRCode() {
+            var qr = new QRious({
+                element: document.getElementById('qrcode'),
+                value: document.getElementById('info').value,
+                size: 150
+            });
+        }
+
+        function selectFrame(element) {
+            const frames = document.querySelectorAll('.frame');
+            frames.forEach(frame => frame.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+    </script>
+</body>
+</html>
